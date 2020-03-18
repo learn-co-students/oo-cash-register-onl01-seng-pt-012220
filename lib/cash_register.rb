@@ -34,10 +34,6 @@ item_names
 end
 
 def void_last_transaction
- transactions =[]
- @items.collect do |transaction|
-  transactions << transaction
- end
- @total -= transactions.last[:price] * transactions.last[:quantity]
- end
+  @total -= @items.last[:price]* @items.last[:quantity]
+end
 end
